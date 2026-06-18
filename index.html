@@ -15,7 +15,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family: 'Georgia', serif;
+font-family:'Georgia',serif;
 background:#f4f4f4;
 color:#222;
 }
@@ -29,8 +29,9 @@ border-bottom:5px solid #d4af37;
 }
 
 header h1{
-font-size:4rem;
-letter-spacing:3px;
+font-size:clamp(2.8rem,8vw,4rem);
+letter-spacing:2px;
+line-height:1;
 }
 
 header p{
@@ -58,8 +59,9 @@ text-align:center;
 }
 
 .hero h2{
-font-size:3rem;
+font-size:clamp(2rem,6vw,3rem);
 margin-bottom:20px;
+line-height:1.2;
 }
 
 .hero p{
@@ -147,6 +149,82 @@ background:#ececec;
 padding:10px;
 text-align:center;
 font-weight:bold;
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+
+@media (max-width:768px){
+
+header{
+padding:20px;
+}
+
+header h1{
+font-size:2.8rem;
+letter-spacing:1px;
+}
+
+header p{
+font-size:1rem;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+padding:12px;
+}
+
+nav a{
+margin:0;
+padding:5px 10px;
+font-size:1rem;
+}
+
+.date{
+font-size:0.9rem;
+padding:10px;
+}
+
+.hero{
+padding:30px 20px;
+}
+
+.hero h2{
+font-size:2.2rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.quote{
+font-size:1.1rem;
+}
+
+.container{
+padding:15px;
+}
+
+.section-title{
+font-size:1.5rem;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.article,
+.editorial,
+.authors{
+padding:20px;
+}
+
+footer{
+font-size:0.9rem;
+}
+
 }
 
 </style>
